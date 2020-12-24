@@ -203,3 +203,60 @@ If the data had timestamp attached for each of the questions, then splitting dat
 
 ![Untitled](https://user-images.githubusercontent.com/67965686/103085636-479baf00-4608-11eb-9a79-6dbb0e3457bd.png)
 
+### Featurizing Text Data with TfIdf vectorizer
+There are various ways to featurize text data. I have explained this in my [blog](https://medium.com/analytics-vidhya/amazon-fine-food-reviews-featurization-with-natural-language-processing-a386b0317f56) post. First lets featurize the question data with TfIdf vectorizer. 
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103086742-59cb1c80-460b-11eb-8f2d-7e5d76f8e0d0.png)
+
+### Applying Logistic Regression with OneVsRest Classifier (for tfidf vectorizers
+
+##### Hyper parameter tuning for best alpha
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103086915-ed9ce880-460b-11eb-8adf-4c075cd1bba0.png)
+
+Lets use Logistic Regression algo to train 500 models (500 tags) is nothing but SGDClassifier with Log loss.
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103086981-26d55880-460c-11eb-8f8a-8bd0ab343591.png)
+
+##### Results
+
+- Micro F1-measure: 0.492
+- Accuracy: 0.222
+- Hamming Loss:0.0029
+
+### OneVsRestClassifier with SVM
+Lets use SVM algo to train 500 models. Linear-SVM is nothing but SGDClassifier with loss as hinge. After finding the hyperparameter alpha using GridSearchCV , I found out alpha to be 10**6
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103087310-0c4faf00-460d-11eb-8463-6e10e7a67436.png)
+
+##### Results
+
+- Micro F1-measure: 0.487
+- Accuracy: 0.201
+- Hamming Loss:0.0031
+
+### Observations
+From all the models we used so far, Logistic Regression with TfIdf vectorizer and n_grams=(1,3) performed better than rest of the models. But we have trained the Logistic Regression model with large number of data points, so comparing this model with rest the models, which are trained with lesser data points, will not make sense.
+
+Here is the result of all the models....
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103087484-a7e11f80-460d-11eb-9efd-210baa7b1410.png)
+
+Here we have trained only two linear models. Other models like tree based models will not work well here due to high dimension of data. Linear SVM has high time complexity so training 500 models on linear SVM is not feasible. Hence, SGD classifier is the best choice in our case.
+
+### Problem with complex models like Random Forests or GBDT ?
+As you might have noticied, I have taken simplest model like Logistic Regression & Linear SVM to train the model. Here is the two primary main reasons why the complex models were not tried
+
+High dimentional data: since we are converting text to TfIdf or BOW vectors, the dimensions we get are very large in size. And when the dimensions are large, typically Random Forests & GBDT won’t work well.
+
+Too many models to train: We have literally 500 models to train (after downscaling of data). And Logistic Regression is the simplest model one can use & it is comparitively faster. If we start using other models like RBF-SVM or RF, it will take too much time to train the model. For me it took more  time to train Linear SVM, that too after downscaling of data by large margin.
+
+#### Enhancements:
+
+To try with more data points (on a system with 32GB RAM & highend processor)
+Featurizing Text Data with Word2Vec: When you try Word2Vec, the dimentionality of data reduces & hence complex models like Random Forests or GBDT might work well
+
+Try using scikit-multilearn library. Please note that this library doesn’t take sparse matrix as input, you need to give dense matrix as input.So obviously you need to have more RAM to use this library
+
+Thank you for reading
+
