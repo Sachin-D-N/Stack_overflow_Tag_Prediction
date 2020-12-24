@@ -77,14 +77,6 @@ The questions are randomized and contains a mix of verbose text sites as well as
                  {\n                 
                     a[x] = (m[x] + u[x])/2;\n         
                  }\n         
-                 c=(n*4)-4;\n         
-                 for(int a1=1; a1&lt;n+1; a1++)\n         
-                 {\n\n             
-                    e[a1][0] = m[a1];\n             
-                    e[a1][1] = m[a1]+1;\n             
-                    e[a1][2] = u[a1]-1;\n             
-                    e[a1][3] = u[a1];\n         
-                 }\n         
                  for(int i=1; i&lt;n+1; i++)\n         
                  {\n            
                     for(int l=1; l&lt;=i; l++)\n            
@@ -109,25 +101,6 @@ The questions are randomized and contains a mix of verbose text sites as well as
         }\n
         </code></pre>\n\n
         <p>The answer should come in the form of a table like</p>\n\n
-        <pre><code>       
-        1            50              50\n       
-        2            50              50\n       
-        99           50              50\n       
-        100          50              50\n       
-        50           1               50\n       
-        50           2               50\n       
-        50           99              50\n       
-        50           100             50\n       
-        50           50              1\n       
-        50           50              2\n       
-        50           50              99\n       
-        50           50              100\n
-        </code></pre>\n\n
-        <p>if the no of inputs is 3 and their ranges are\n
-        1,100\n
-        1,100\n
-        1,100\n
-        (could be varied too)</p>\n\n
         <p>The output is not coming,can anyone correct the code or tell me what\'s wrong?</p>\n'
 <b>Tags </b>: 'c++ c'
 </pre>
