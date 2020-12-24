@@ -160,8 +160,7 @@ C# appears most number of times, Java is the second most. Majority of the most f
 ## Cleaning and preprocessing of Questions
 
 ###### Due to hardware limitations, I am considering only 200K data points
-
-1. questions contains HTML tag <code> tag. So separate out code-snippets from the Body
+1. questions contains HTML tag [<code>] tag. So separate out code-snippets from the Body
 2. Remove Spcial characters from title and Body (not in code)
 3. Remove stop words (Except 'C')
 4. Remove HTML Tags
