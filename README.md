@@ -145,4 +145,33 @@ I have used pandas library to load the data. Please visit My [github](https://gi
 
 ![Untitled](https://user-images.githubusercontent.com/67965686/103080228-66e00f80-45fb-11eb-94d6-93bec6e53e76.png)
 
+## Most Frequent Tags
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103080377-b6bed680-45fb-11eb-9c51-15f7904f9f35.png)
+
+C# appears most number of times, Java is the second most. Majority of the most frequent tags are programming language. And here is the chart for top 20 tags
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103080511-043b4380-45fc-11eb-8f37-fd3d868c4f5a.png)
+
+- Majority of the most frequent tags are programming language.
+- C# is the top most frequent programming language.
+- Android, IOS, Linux and windows are among the top most frequent operating systems.
+
+## Cleaning and preprocessing of Questions
+
+###### Due to hardware limitations, I am considering only 200K data points
+
+1. questions contains HTML tag <code> tag. So separate out code-snippets from the Body
+2. Remove Spcial characters from title and Body (not in code)
+3. Remove stop words (Except 'C')
+4. Remove HTML Tags
+5. Convert all the characters into small letters
+6. Use SnowballStemmer to stem the words.
+Stemming is the process of reducing a word to its word stem.
+For Example: "python" is the stem word for the words ["python" "pythoner", "pythoning","pythoned"]
+7. Give more weightage to title: Add title three times to the question. Title contains the information which is more specific to the question and also only after seeing the question title, a user decides whether to look into the question in detail. At least most of the users do this if not all.
+
+### Sample question after preprocessing
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103080852-bbd05580-45fc-11eb-9711-3793e6087d70.png)
 
