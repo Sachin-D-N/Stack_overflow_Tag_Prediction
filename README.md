@@ -106,7 +106,28 @@ The questions are randomized and contains a mix of verbose text sites as well as
                  }    \n\n        
                  system("PAUSE");\n        
                  return 0;    \n
-       
+        }\n
+        </code></pre>\n\n
+        <p>The answer should come in the form of a table like</p>\n\n
+        <pre><code>       
+        1            50              50\n       
+        2            50              50\n       
+        99           50              50\n       
+        100          50              50\n       
+        50           1               50\n       
+        50           2               50\n       
+        50           99              50\n       
+        50           100             50\n       
+        50           50              1\n       
+        50           50              2\n       
+        50           50              99\n       
+        50           50              100\n
+        </code></pre>\n\n
+        <p>if the no of inputs is 3 and their ranges are\n
+        1,100\n
+        1,100\n
+        1,100\n
+        (could be varied too)</p>\n\n
         <p>The output is not coming,can anyone correct the code or tell me what\'s wrong?</p>\n'
 <b>Tags </b>: 'c++ c'
 </pre>
