@@ -111,4 +111,24 @@ The questions are randomized and contains a mix of verbose text sites as well as
 <b>Tags </b>: 'c++ c'
 </pre>
 
+## Mapping the Business problem to a Machine Learning Problem
+
+It is a multi-label classification problem.
+
+In Multi-label Classification, multiple labels (in this problem its tags) may be assigned to each instance and there is no constraint on how many of the classes the instance can be assigned to. Source: [Wiki](https://en.wikipedia.org/wiki/Multi-label_classification)
+
+Find more about multi-label classification problem [here](https://scikit-learn.org/stable/modules/multiclass.html)
+
+A question on Stackoverflow might be about any of C, Pointers, JAVA, Regex, FileIO and/or memory-management at the same time or none of these.
+
+Performance metric
+1. Micro F1 score
+2. Macro F1 score
+
+Please read this [blog](https://www.kaggle.com/wiki/HammingLoss) to know more about metrics.
+
+## Exploratory Data Analysis
+
+I have used pandas library to load the data. Please visit My [github](https://github.com/Sachin-D-N/Stack_overflow_Tag_Prediction/blob/main/Stack_Overflow_Tag_Predictor/Stack_Overflow_Tag_Predictor.ipynb) repo to see the full code. I have taken a sample of 1000000 (10 lakh) data points from Train.csv. Here is a list of major observations from EDA.
+
 
