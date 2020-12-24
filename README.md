@@ -27,3 +27,29 @@ Read the full problem statement on [kaggle](https://www.kaggle.com/c/facebook-re
 - Predict as many tags as possible with high [precision and recall](https://medium.com/analytics-vidhya/performance-metrics-for-machine-learning-models-80d7666b432e).
 - Incorrect tags could impact customer experience on StackOverflow.
 - No strict latency constraints.
+
+# Machine Learning Problem
+
+## Data
+
+1. Data contains 4 fields
+
+2. Id - Unique identifier for each question
+
+3. Title - The question’s title
+
+4. Body - The body of the question
+
+5. Tags - The tags associated with the question
+
+Click [here](Data contains 4 fields
+
+Id - Unique identifier for each question
+
+Title - The question’s title
+
+Body - The body of the question
+
+Tags - The tags associated with the question
+
+Click [here](https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/data) for more details.
