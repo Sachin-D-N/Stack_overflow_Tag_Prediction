@@ -258,5 +258,12 @@ Featurizing Text Data with Word2Vec: When you try Word2Vec, the dimentionality o
 
 Try using scikit-multilearn library. Please note that this library doesn’t take sparse matrix as input, you need to give dense matrix as input.So obviously you need to have more RAM to use this library.
 
-Thank you for reading.
+###### Thanks for reading and your patience. I hope you liked the post, let me know if there are any errors in my post.
 
+### Contact
+
+[Email](sachin.s1dn@gmail.com)
+[Linkedln](https://www.linkedin.com/in/sachin-d-n-1st-8150351b2/)
+[Github](https://github.com/Sachin-D-N/Stack_overflow_Tag_Prediction/tree/main)
+[Medium](https://sachin-s1dn.medium.com/)
+[Twitter](https://twitter.com/home)
