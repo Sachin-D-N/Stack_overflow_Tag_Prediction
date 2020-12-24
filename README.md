@@ -127,4 +127,22 @@ Please read this [blog](https://www.kaggle.com/wiki/HammingLoss) to know more ab
 
 I have used pandas library to load the data. Please visit My [github](https://github.com/Sachin-D-N/Stack_overflow_Tag_Prediction/blob/main/Stack_Overflow_Tag_Predictor/Stack_Overflow_Tag_Predictor.ipynb) repo to see the full code. I have taken a sample of 200k (2 lakh) data points from Train.csv. Here is a list of major observations from EDA.
 
+1. Number of rows in the database: 200000
+2. Number of unique tags: 42048
+3. Top 10 important tags: ['.a', '.app', '.asp.net-mvc', '.aspxauth', '.bash-profile', '.class-file', '.cs-file', '.doc', '.drv', '.ds-store']
+4. There are total 153 tags which are used more than 10000 times.
+5. 14 tags are used more than 100000 times.
+6. Most frequent tag (i.e. c#) is used 331505 times.
+7. Since some tags occur much more frequenctly than others, Micro-averaged F1-score is the appropriate metric for this probelm.
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103080001-fa651080-45fa-11eb-8f37-cd6db0f742aa.png)
+
+8.Tags Analysis
+- Maximum number of tags per question: 5
+- Minimum number of tags per question: 1
+- Avg. number of tags per question: 2.899440
+- Questions with 3 tags appeared more in number 
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103080228-66e00f80-45fb-11eb-94d6-93bec6e53e76.png)
+
 
