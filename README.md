@@ -173,3 +173,33 @@ For Example: "python" is the stem word for the words ["python" "pythoner", "pyth
 ### Sample question after preprocessing
 ![Untitled](https://user-images.githubusercontent.com/67965686/103080852-bbd05580-45fc-11eb-9711-3793e6087d70.png)
 
+## Machine Learning Models
+- Total number of questions: 199999
+- Total number of tags: 23747
+
+Here we are going to use Problem Transformation(Binary Relevance) method to solve the problem.
+
+### Binary Relevance:
+Here we are going to convert multi-label classification problem into multiple single class classification problems.For example if we are having 5 multi-label classification problem, then we need to train 5 single class classification models.
+
+Basically in this method, we treat each label (in our case its tag) as a separate single class classification problem. This technique is simple and is widely used.
+
+Please refer to [analytics vidhya’s blog](https://www.analyticsvidhya.com/blog/2017/08/introduction-to-multi-label-classification/) to know more about the techniques to solve a Multi-Label classification problem.
+
+### Downscaling of data
+Coming back to our stackoverflow predictor problem, we need to train 30645 models literally!!! Thats really huge (both in terms of time & speed) for a system with 8GB RAM & i5 processor. So we will sample the number of tags instead considering all of them. But how many tags to be sampled with the minimal information loss ? Plotting ‘percentage of questions covered’ Vs ‘Number of tags’ would help to solve this.
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103085341-6d748400-4607-11eb-8796-0780775ce6d6.png)
+
+#### Observations
+
+1. with 500 tags we are covering 90.446% of questions
+2. with 5000 tags we are covering 98.77 % of questions
+3. By choosing only 500 tags (2% approximately) of the total 23437 tags we are loosing only 9% of the questions & also training 500 models is reasonable good,So we shall choose 500 tags.
+
+### Train and Test data
+
+If the data had timestamp attached for each of the questions, then splitting data with respect to its temporal nature would have made more sense than splitting data randomly. But since the data is not of temporal nature (i.e., no timestamp), we are splitting data randomly into 80% train set & 20% test set.
+
+![Untitled](https://user-images.githubusercontent.com/67965686/103085636-479baf00-4608-11eb-9a79-6dbb0e3457bd.png)
+
