@@ -160,7 +160,7 @@ C# appears most number of times, Java is the second most. Majority of the most f
 ## Cleaning and preprocessing of Questions
 
 ###### Due to hardware limitations, I am considering only 200K data points
-1. questions contains HTML tag [<code>] tag. So separate out code-snippets from the Body
+1. questions contains HTML tag code tag ,So separate out code-snippets from the Body
 2. Remove Spcial characters from title and Body (not in code)
 3. Remove stop words (Except 'C')
 4. Remove HTML Tags
@@ -171,6 +171,5 @@ For Example: "python" is the stem word for the words ["python" "pythoner", "pyth
 7. Give more weightage to title: Add title three times to the question. Title contains the information which is more specific to the question and also only after seeing the question title, a user decides whether to look into the question in detail. At least most of the users do this if not all.
 
 ### Sample question after preprocessing
-
 ![Untitled](https://user-images.githubusercontent.com/67965686/103080852-bbd05580-45fc-11eb-9711-3793e6087d70.png)
 
