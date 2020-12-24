@@ -111,6 +111,8 @@ The questions are randomized and contains a mix of verbose text sites as well as
 <b>Tags </b>: 'c++ c'
 </pre>
 
+
+
 ## Mapping the Business problem to a Machine Learning Problem
 
 It is a multi-label classification problem.
@@ -129,6 +131,6 @@ Please read this [blog](https://www.kaggle.com/wiki/HammingLoss) to know more ab
 
 ## Exploratory Data Analysis
 
-I have used pandas library to load the data. Please visit My [github](https://github.com/Sachin-D-N/Stack_overflow_Tag_Prediction/blob/main/Stack_Overflow_Tag_Predictor/Stack_Overflow_Tag_Predictor.ipynb) repo to see the full code. I have taken a sample of 1000000 (10 lakh) data points from Train.csv. Here is a list of major observations from EDA.
+I have used pandas library to load the data. Please visit My [github](https://github.com/Sachin-D-N/Stack_overflow_Tag_Prediction/blob/main/Stack_Overflow_Tag_Predictor/Stack_Overflow_Tag_Predictor.ipynb) repo to see the full code. I have taken a sample of 200k (2 lakh) data points from Train.csv. Here is a list of major observations from EDA.
 
 
