@@ -254,9 +254,9 @@ Too many models to train: We have literally 500 models to train (after downscali
 #### Enhancements:
 
 To try with more data points (on a system with 32GB RAM & highend processor)
-Featurizing Text Data with Word2Vec: When you try Word2Vec, the dimentionality of data reduces & hence complex models like Random Forests or GBDT might work well
+Featurizing Text Data with Word2Vec: When you try Word2Vec, the dimentionality of data reduces & hence complex models like Random Forests or GBDT might work well.
 
-Try using scikit-multilearn library. Please note that this library doesn’t take sparse matrix as input, you need to give dense matrix as input.So obviously you need to have more RAM to use this library
+Try using scikit-multilearn library. Please note that this library doesn’t take sparse matrix as input, you need to give dense matrix as input.So obviously you need to have more RAM to use this library.
 
-Thank you for reading
+Thank you for reading.
 
