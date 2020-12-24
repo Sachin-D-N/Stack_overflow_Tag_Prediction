@@ -42,14 +42,13 @@ Read the full problem statement on [kaggle](https://www.kaggle.com/c/facebook-re
 
 5. Tags - The tags associated with the question
 
-Click [here](Data contains 4 fields
-
-Id - Unique identifier for each question
-
-Title - The question’s title
-
-Body - The body of the question
-
-Tags - The tags associated with the question
-
 Click [here](https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/data) for more details.
+
+All of the data is in 2 files: Train and Test.<br />
+<pre>
+<b>Size of Train.csv</b> - 6.75GB<br />
+<b>Size of Test.csv</b> - 2GB<br />
+<b>Number of rows in Train.csv</b> = 6034195<br />
+</pre>
+The questions are randomized and contains a mix of verbose text sites as well as sites related to math and programming. The number of questions from each site may vary, and no filtering has been performed on the questions (such as closed questions).<br />
+<br />
